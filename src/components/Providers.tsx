@@ -8,8 +8,10 @@ interface LayoutProps {
   children: ReactNode
 }
 
+const queryClient = new QueryClient()
+
 const Layout: FC<LayoutProps> = ({ children }) => {
-  const queryClient = new QueryClient()
+
 
   return (
     <QueryClientProvider client={queryClient}>
